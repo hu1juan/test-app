@@ -1,0 +1,201 @@
+.test-app-wrapper {
+  $purple: #310c3d;
+  $orange: #f18805;
+  $yellow: #e8bf2e;
+  section.hero-banner {
+    padding: 0 15px;
+    height: 100vh;
+    background-color: $purple;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    div {
+      max-width: 550px;
+      margin: 0 auto;
+      p {
+        &.main-heading {
+          font-size: 36px;
+          color: $yellow;
+          margin: 0;
+        }
+        &.sub-heading {
+          font-size: 18px;
+          color: $orange;
+          margin: 0;
+        }
+      }
+      button {
+        background-color: $purple;
+        border: 2px solid $yellow;
+        border-radius: 25px;
+        font-size: 14px;
+        padding: 10px 20px;
+        color: $yellow;
+        font-weight: 800;
+        cursor: pointer;
+        &:hover {
+          background-color: #552f3a;
+        }
+        &:active {
+          background: #7a5337;
+        }
+        a {
+          color: $yellow;
+          &:hover {
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+
+  section.info {
+    background-color: $orange;
+    padding: 100px 0 50px;
+    div.uk-container {
+      display: flex;
+      div {
+        width: 50%;
+        color: $purple;
+        &:first-child {
+          margin-right: 15px;
+        }
+        &.text-part {
+          p.heading {
+            font-size: 28px;
+            font-weight: 800;
+            font-family: 'Alegreya', serif !important;
+          }
+          p.body {
+            font-size: 18px;
+            font-family: 'Alegreya', serif !important;
+          }
+        }
+        &.img-part img {
+          border: 4px solid $purple;
+          border-radius: 50px;
+        }
+      }
+    }
+  }
+  section.contact::before {
+    opacity: 0;
+  }
+  section.contact {
+    background: linear-gradient(
+        rgba(232, 191, 46, 0.8),
+        rgba(232, 191, 46, 0.8)
+      ),
+      url('../assets/network.png');
+    // background-image: url('../assets/network.png');
+    background-repeat: no-repeat;
+    background-position: 5% 50%;
+    background-size: 40% 300px;
+    // background-blend-mode: color;
+    padding: 100px 0 50px;
+    background-color: $yellow;
+    div.uk-container {
+      display: flex;
+      div {
+        width: 50%;
+        color: $purple;
+        &:first-child {
+          margin-right: 15px;
+        }
+        &.text-part {
+          p.heading {
+            font-size: 28px;
+            font-weight: 800;
+            font-family: 'Alegreya', serif !important;
+          }
+          p.body {
+            font-size: 18px;
+            font-family: 'Alegreya', serif !important;
+          }
+        }
+        &.form-part {
+          input[type='text'],
+          input[type='email'],
+          textarea {
+            color: $purple;
+            border: 1px solid $orange;
+            background-color: rgba(241, 136, 5, 0.25);
+            font-size: 18px;
+            &::placeholder {
+              color: rgba(102, 102, 102, 0.4);
+            }
+            &:focus {
+              border: 1px solid $purple;
+              &::placeholder {
+                color: $purple;
+              }
+            }
+          }
+          div {
+            width: 100%;
+            button {
+              background-color: transparent;
+              border: 2px solid $purple;
+              border-radius: 25px;
+              font-size: 14px;
+              padding: 10px 20px;
+              color: $purple;
+              font-weight: 800;
+              cursor: pointer;
+              &:hover {
+                background-color: #eab123;
+              }
+              &:active {
+                background-color: $orange;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  section.footer {
+    padding: 100px 0 25px;
+    background: linear-gradient(rgba(49, 12, 61, 0.7), rgba(49, 12, 61, 0.7)),
+      url('../assets/bright-squares.png');
+    background-color: $purple;
+    text-align: center;
+    color: $yellow;
+    span {
+      font-size: 12px;
+      font-weight: 500;
+      text-shadow: 0 0 6px $yellow;
+    }
+  }
+  @media screen and (max-width: 640px) {
+    section.info {
+      padding: 25px 0;
+      div.uk-container {
+        flex-flow: column wrap;
+        flex-direction: column-reverse;
+        div {
+          width: 100%;
+          &.text-part {
+            margin-top: 25px;
+          }
+        }
+      }
+    }
+    section.contact {
+      background-position: 50% 90%;
+      background-size: 70% 240px;
+      padding: 25px 0;
+      div.uk-container {
+        flex-flow: column wrap;
+        div {
+          width: 100%;
+        }
+      }
+    }
+
+    section.footer {
+      text-align: left;
+    }
+  }
+}

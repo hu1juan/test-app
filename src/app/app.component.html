@@ -1,20 +1,80 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<div class="test-app-wrapper">
+  <section class="hero-banner" id="hero-banner">
+    <div class="uk-text-center">
+      <p class="main-heading">Hello World!</p>
+      <p class="sub-heading">
+        lorem ipsum dolor sit amet, consectetuer adipisc elit
+      </p>
+      <a href="#contact" uk-scroll>
+        <button class="uk-margin-top">contact us</button></a
+      >
+    </div>
+  </section>
 
+  <section class="info" id="info">
+    <div class="uk-container">
+      <div class="text-part">
+        <p class="heading">Pharetra Magna Etiam Mollis</p>
+        <p class="body">
+          Aenean lacinia bibendum nulla sed consectetur. Cras mattis consectetur
+          purus sit amet fermentum. Morbi leo risus, porta ac consectetur ac,
+          vestibulum at eros. Aenean eu leo quam. Pallentesque ornare sem
+          lacinia quam venenatis vestibulum. Cras justo odio, dapibus ac
+          facilisis in, egestas eget quam.
+        </p>
+      </div>
+      <div class="img-part">
+        <img src="./assets/orange.jpg" alt="" />
+      </div>
+    </div>
+    <div class="uk-text-center uk-margin-top">
+      <a href="#footer" uk-scroll>
+        <img
+          src="{{
+            isArrowHover
+              ? './assets/triangle-purple.svg'
+              : './assets/triangle-yellow.svg'
+          }}"
+          (mouseenter)="isArrowHover = true"
+          (mouseleave)="isArrowHover = false"
+      /></a>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="uk-container">
+      <div class="text-part">
+        <p class="heading">Contact Us!</p>
+        <p class="body">
+          Nulla vitae elit libero, a pharetra augue. Curabitur blandit tempus
+          porttitor. Vestibulum id ligula porta felis euismod semper.
+        </p>
+      </div>
+      <div class="form-part">
+        <form>
+          <fieldset class="uk-fieldset">
+            <input class="uk-input" type="text" placeholder="My Name" />
+            <input
+              class="uk-input uk-margin-top"
+              type="email"
+              placeholder="My Email"
+            />
+            <textarea
+              class="uk-input uk-margin-top"
+              placeholder="My Message"
+            ></textarea>
+          </fieldset>
+          <div class="uk-text-right">
+            <button class="uk-margin-top">send</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section class="footer" id="footer">
+    <div class="uk-container">
+      <span>@2020, Cre8ivClick ~ all rights reserved</span>
+    </div>
+  </section>
+</div>
